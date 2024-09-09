@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./../../modules/programs/waybar.nix
   ];
@@ -10,7 +10,7 @@
       "LIBVA_DRIVER_NAME,nvidia"
       "XDG_SESSION_TYPE,wayland"
       "GBM_BACKEND,nvidia-drm"
-      "__GLX_VENDOR_LIBRARY_NAME,nvidia" 
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "WLR_NO_HARDWARE_CURSORS,1"
       "XCURSOR_SIZE,22"
       "QT_QPA_PLATFORMTHEME,qt5ct"
@@ -26,7 +26,7 @@
 
     # Programs
     "$terminal" = "kitty";
-    "$fileManager" = "";
+    "$fileManager" = "thunar";
     "$menu" = "rofi -show drun -click-to-exit -kb-cancel \"Escape,MouseSecondary\"";
     "$browser" = "firefox";
 
@@ -60,7 +60,7 @@
 
     decoration = {
       rounding = 4;
-      
+
       blur = {
         enabled = true;
         size = 3;
@@ -119,7 +119,6 @@
       "stayfocused, xfce-polkit"
     ];
 
-
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     bind = [
       "$mod, T, exec, $terminal"
@@ -128,7 +127,7 @@
       "$mod, D, exec, discord"
       "$mod, B, exec, $browser"
       "ALT, SPACE, exec, pkill rofi || $menu"
-      "$mod, Q, killactive, " 
+      "$mod, Q, killactive, "
       "$mod, M, exit, "
       "$mod, J, togglesplit, "
       "$mod SHIFT, F, fullscreen"
@@ -158,7 +157,8 @@
       "$mod, right, exec, $workspace switchmonitor"
     ];
 
-    workspace = ["1,monitor:DP-4"
+    workspace = [
+      "1,monitor:DP-4"
       "2,monitor:DP-4"
       "3,monitor:DP-4"
       "4,monitor:DP-4"

@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./../../modules/programs/hyprland.nix
     ./../../modules/programs/rofi.nix
@@ -17,7 +20,7 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
-  
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -85,21 +88,21 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = [ "thunar.desktop" "codium.desktop" ];
-    "image/jpeg"=[ "gimp.desktop" ];
-    "text/plain" = [ "codium.desktop" ];
-    "image/svg+xml" = [ "codium.desktop" ]; 
-    "application/x-shellscript" = [ "sublime_text.desktop" "kitty-open.desktop" "okularApplication_txt.desktop" ];
+    "inode/directory" = ["thunar.desktop" "codium.desktop"];
+    "image/jpeg" = ["gimp.desktop"];
+    "text/plain" = ["codium.desktop"];
+    "image/svg+xml" = ["codium.desktop"];
+    "application/x-shellscript" = ["sublime_text.desktop" "kitty-open.desktop" "okularApplication_txt.desktop"];
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-    programs.git = {
+  programs.git = {
     enable = true;
     userName = "Drigster";
     userEmail = "62962772+Drigster@users.noreply.github.com";
   };
-  
+
   # programs.steam = {
   #   enable = true;
   #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play

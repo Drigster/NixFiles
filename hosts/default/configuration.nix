@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
@@ -11,7 +14,7 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true; 
+  boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
@@ -32,9 +35,9 @@
     LC_PAPER = "et_EE.UTF-8";
     LC_TELEPHONE = "et_EE.UTF-8";
     LC_TIME = "et_EE.UTF-8";
-  }; 
+  };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nvidia.enable = true;
   services.xserver.enable = true;
@@ -51,10 +54,10 @@
   hardware.pulseaudio.enable = false;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  
+
   security.rtkit.enable = true;
   security.polkit.enable = true;
-  
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -68,13 +71,13 @@
   users.users.drigster = {
     isNormalUser = true;
     description = "Drigster";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   nixpkgs.config.allowUnfree = true;
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
@@ -108,6 +111,7 @@
     pamixer
     btop
     alejandra
+    dconf
   ];
 
   programs.nix-ld.enable = true;
@@ -124,7 +128,7 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" "NerdFontsSymbolsOnly" ]; })
+    (nerdfonts.override {fonts = ["FiraCode" "NerdFontsSymbolsOnly"];})
     texlivePackages.inter
   ];
 
