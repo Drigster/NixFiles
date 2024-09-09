@@ -22,5 +22,12 @@
         inputs.home-manager.nixosModules.default
       ];
     };
+    nixosConfigurations.notebook = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/notebook/configuration.nix
+        inputs.home-manager.nixosModules.notebook
+      ];
+    };
   };
 }
