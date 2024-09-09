@@ -1,15 +1,12 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./../../configuration.nix
-    nixos-hardware.nixosModules.framework-16-7040-amd
+    inputs.nixos-hardware.nixosModules.framework-16-7040-amd
   ];
 
+  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"];
   boot.kernelParams = ["amdgpu.abmlevel=0"];
   services.power-profiles-daemon.enable = true;
 
