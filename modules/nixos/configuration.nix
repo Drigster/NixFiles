@@ -37,7 +37,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  nvidia.enable = true;
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
 
