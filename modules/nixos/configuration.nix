@@ -6,7 +6,7 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
-    ./../../modules/nixos/xdg-portal.nix
+    ./xdg-portal.nix
   ];
 
   boot.loader.grub.enable = true;
