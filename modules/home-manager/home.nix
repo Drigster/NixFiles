@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ./../../modules/programs/hyprland.nix
-    ./../../modules/programs/rofi.nix
+    ./../programs/hyprland.nix
+    ./../programs/rofi.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

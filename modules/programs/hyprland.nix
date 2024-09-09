@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./../../modules/programs/waybar.nix
+    ./waybar.nix
   ];
 
   wayland.windowManager.hyprland.enable = true;
