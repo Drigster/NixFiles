@@ -30,7 +30,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/notebook/configuration.nix
-        inputs.home-manager.nixosModules.notebook
+        inputs.home-manager.nixosModules.default
       ];
     };
   };
