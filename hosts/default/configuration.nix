@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./hardware-configuration.nix
     ./../../modules/nixos/configuration.nix
     ./../../modules/nixos/nvidia.nix
   ];

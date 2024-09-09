@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./hardware-configuration.nix
     ./../../configuration.nix
     nixos-hardware.nixosModules.framework-16-7040-amd
   ];
