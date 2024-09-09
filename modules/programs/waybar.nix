@@ -135,13 +135,42 @@
           format-icons = ["󰹐" "󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
         };
         battery = {
-          interval = 60;
+          interval = 10;
           states = {
-            warning = 30;
-            critical = 15;
+            "0" = 0;
+            "10" = 10;
+            "20" = 20;
+            "30" = 30;
+            "40" = 40;
+            "50" = 50;
+            "60" = 60;
+            "70" = 70;
+            "80" = 80;
+            "90" = 90;
+            "100" = 100;
           };
-          format = "{icon} {capacity}%";
-          format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format-discharging-0 = "󰂎 {capacity}%";
+          format-discharging-10 = "󰁺 {capacity}%";
+          format-discharging-20 = "󰁻 {capacity}%";
+          format-discharging-30 = "󰁼 {capacity}%";
+          format-discharging-40 = "󰁽 {capacity}%";
+          format-discharging-50 = "󰁾 {capacity}%";
+          format-discharging-60 = "󰁿 {capacity}%";
+          format-discharging-70 = "󰂀 {capacity}%";
+          format-discharging-80 = "󰂁 {capacity}%";
+          format-discharging-90 = "󰂂 {capacity}%";
+          format-discharging-100 = "󰁹 {capacity}%";
+          format-charging-0 = "󰢟 {capacity}%";
+          format-charging-10 = "󰢜 {capacity}%";
+          format-charging-20 = "󰂆 {capacity}%";
+          format-charging-30 = "󰂇 {capacity}%";
+          format-charging-40 = "󰂈 {capacity}%";
+          format-charging-50 = "󰢝 {capacity}%";
+          format-charging-60 = "󰂉 {capacity}%";
+          format-charging-70 = "󰢞 {capacity}%";
+          format-charging-80 = "󰂊 {capacity}%";
+          format-charging-90 = "󰂋 {capacity}%";
+          format-charging-100 = "󰂅 {capacity}%";
           max-length = 25;
         };
         pulseaudio = {
