@@ -44,6 +44,7 @@
           tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+          on-click = "blueman-manager";
         };
         network = {
           format = "{ifname}";
@@ -149,17 +150,17 @@
             "90" = 90;
             "100" = 100;
           };
-          format-discharging-0 = "󰂎 {capacity}%";
-          format-discharging-10 = "󰁺 {capacity}%";
-          format-discharging-20 = "󰁻 {capacity}%";
-          format-discharging-30 = "󰁼 {capacity}%";
-          format-discharging-40 = "󰁽 {capacity}%";
-          format-discharging-50 = "󰁾 {capacity}%";
-          format-discharging-60 = "󰁿 {capacity}%";
-          format-discharging-70 = "󰂀 {capacity}%";
-          format-discharging-80 = "󰂁 {capacity}%";
-          format-discharging-90 = "󰂂 {capacity}%";
-          format-discharging-100 = "󰁹 {capacity}%";
+          format-0 = "󰂎 {capacity}%";
+          format-10 = "󰁺 {capacity}%";
+          format-20 = "󰁻 {capacity}%";
+          format-30 = "󰁼 {capacity}%";
+          format-40 = "󰁽 {capacity}%";
+          format-50 = "󰁾 {capacity}%";
+          format-60 = "󰁿 {capacity}%";
+          format-70 = "󰂀 {capacity}%";
+          format-80 = "󰂁 {capacity}%";
+          format-90 = "󰂂 {capacity}%";
+          format-100 = "󰁹 {capacity}%";
           format-charging-0 = "󰢟 {capacity}%";
           format-charging-10 = "󰢜 {capacity}%";
           format-charging-20 = "󰂆 {capacity}%";

@@ -26,6 +26,7 @@
 
       monitor = [
         "DP-4, 2560x1080@144, 0x0, 1"
+        "eDP-1, 2560x1600@165, 0x0, 1"
         "Unknown-1, disable"
       ];
 
@@ -174,6 +175,15 @@
         "7,monitor:DP-4"
         "8,monitor:DP-4"
         "9,monitor:DP-4"
+        "1,monitor:eDP-4"
+        "2,monitor:eDP-4"
+        "3,monitor:eDP-4"
+        "4,monitor:eDP-4"
+        "5,monitor:eDP-4"
+        "6,monitor:eDP-4"
+        "7,monitor:eDP-4"
+        "8,monitor:eDP-4"
+        "9,monitor:eDP-4"
         "special:special, on-created-empty:[float;size 50% 70%;center;animation slidefadevert -50%;stayfocused] kitty -o background_opacity=0.7"
       ];
       # Move/resize windows with mod + LMB/RMB and dragging
