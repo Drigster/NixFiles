@@ -303,6 +303,11 @@
       }
 
       #custom-media {
+
+      }
+
+      #custom-power {
+        margin-right: 6px;
       }
 
       #tray > .passive {
