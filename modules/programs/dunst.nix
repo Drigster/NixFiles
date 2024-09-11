@@ -5,7 +5,7 @@
 }: {
   services.dunst = {
     enable = true;
-    services.dunst.settings = {
+    settings = {
       global = {
         frame_width = 2;
         frame_color = "#788388";
@@ -13,7 +13,7 @@
         corner_radius = 4;
         icon_corner_radius = 4;
 
-        font = Fira Code Mono 10;
+        font = "Fira Code Mono 10";
 
         markup = "yes";
         show_age_threshold = 60;

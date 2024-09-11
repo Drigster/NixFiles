@@ -8,9 +8,6 @@
   imports = [
     inputs.home-manager.nixosModules.default
     ./../programs/xdg-portal.nix
-    ./../programs/hyprland.nix
-    ./../programs/rofi.nix
-    ./../programs/dunst.nix
   ];
 
   boot.loader.grub.enable = true;
