@@ -34,7 +34,7 @@
 
       # Programs
       "$terminal" = "kitty";
-      "$fileManager" = "nemo";
+      "$fileManager" = "thunar";
       "$menu" = "rofi -show drun -click-to-exit -kb-cancel \"Escape,MouseSecondary\"";
       "$browser" = "firefox";
 
@@ -133,6 +133,7 @@
         "$mod, Return, togglespecialworkspace"
         "$mod, E, exec, $fileManager"
         "$mod, D, exec, discord"
+        "$mod, C, exec, codium"
         "$mod, B, exec, $browser"
         "ALT, SPACE, exec, pkill rofi || $menu"
         "$mod, Q, killactive, "

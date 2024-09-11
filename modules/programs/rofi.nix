@@ -6,6 +6,10 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
+    plugins = [
+      pkgs.rofi-calc
+      pkgs.rofi-power-menu
+    ];
     theme = let
       # Use `mkLiteral` for string-like values that should show without
       # quotes, e.g. =

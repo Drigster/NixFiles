@@ -4,8 +4,6 @@
   ...
 }: {
   imports = [
-    ./../programs/hyprland.nix
-    ./../programs/rofi.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -89,7 +87,7 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = ["nemo.desktop" "codium.desktop"];
+    "inode/directory" = ["thunar.desktop" "codium.desktop"];
     "image/jpeg" = ["gimp.desktop"];
     "text/plain" = ["codium.desktop"];
     "image/svg+xml" = ["codium.desktop"];

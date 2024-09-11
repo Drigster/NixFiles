@@ -2,11 +2,15 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
-    ./xdg-portal.nix
+    ./../programs/xdg-portal.nix
+    ./../programs/hyprland.nix
+    ./../programs/rofi.nix
+    ./../programs/dunst.nix
   ];
 
   boot.loader.grub.enable = true;
@@ -39,6 +43,8 @@
 
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  programs.hyprland.enable = true;
 
   services.xserver.xkb = {
     layout = "us";
@@ -89,8 +95,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     dunst
-    nemo-with-extensions
-    gvfs
     ark
     kitty
     bun
@@ -109,7 +113,20 @@
     btop
     alejandra
     dconf
+    networkmanager
   ];
+
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  programs.xfconf.enable = true;
+  services.gvfs = {
+    enable = true;
+    package = lib.mkForce pkgs.gnome3.gvfs;
+  };
+  services.tumbler.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
