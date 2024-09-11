@@ -11,16 +11,12 @@
       pkgs.rofi-power-menu
     ];
     theme = let
-      # Use `mkLiteral` for string-like values that should show without
-      # quotes, e.g. =
-      # {
-      #   foo = "abc"; => foo =  "abc";
-      #   bar = mkLiteral "abc"; => bar =  abc;
-      # };
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       configuration = {
-        modi = "drun,filebrowser,window,run";
+        # calc:${pkgs.rofi-calc}/bin/calc,
+        modi = "drun,filebrowser,window,combi,run,power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu";
+        combi-modi = ["drun" "calc" "power-menu"];
         show-icons = true;
         display-drun = "";
         drun-display-format = "{name}";

@@ -8,6 +8,7 @@
   imports = [
     inputs.home-manager.nixosModules.default
     ./../programs/xdg-portal.nix
+    ./../programs/thunar.nix
   ];
 
   boot.loader.grub.enable = true;

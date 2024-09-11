@@ -7,7 +7,6 @@
     ./../programs/hyprland.nix
     ./../programs/rofi.nix
     ./../programs/dunst.nix
-    ./../programs/thunar.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -34,6 +33,10 @@
     pkgs.spotify
     pkgs.syncthing
     pkgs.python3
+
+    pkgs.libqalculate
+    pkgs.rofi-calc
+    pkgs.rofi-power-menu
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

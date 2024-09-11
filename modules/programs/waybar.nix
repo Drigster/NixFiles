@@ -21,6 +21,7 @@
           "memory"
           "pulseaudio"
           "pulseaudio#pulse2"
+          "custom/power"
         ];
         "hyprland/window" = {
           max-length = 200;
@@ -196,6 +197,10 @@
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
           on-click-right = "pavucontrol";
           tooltip = "false";
+        };
+        "custom/power" = {
+          format = "";
+          on-click = "rofi -show power-menu -modi power-menu:rofi-power-menu -click-to-exit -kb-cancel \"Escape,MouseSecondary\"";
         };
         "custom/media" = {
           exec = "bun /home/drigster/dotfiles/bin/scripts/src/media/display.ts";
