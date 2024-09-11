@@ -34,7 +34,7 @@
 
       # Programs
       "$terminal" = "kitty";
-      "$fileManager" = "thunar";
+      "$fileManager" = "nemo";
       "$menu" = "rofi -show drun -click-to-exit -kb-cancel \"Escape,MouseSecondary\"";
       "$browser" = "firefox";
 

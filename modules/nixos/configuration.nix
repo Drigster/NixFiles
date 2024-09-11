@@ -89,9 +89,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     dunst
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.thunar-archive-plugin
+    nemo-with-extensions
+    gvfs
+    ark
     kitty
     bun
     bat
