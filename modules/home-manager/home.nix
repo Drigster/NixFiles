@@ -7,6 +7,7 @@
     ./../programs/hyprland.nix
     ./../programs/rofi.nix
     ./../programs/dunst.nix
+    ./../programs/thunar.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
