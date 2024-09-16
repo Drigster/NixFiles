@@ -164,6 +164,16 @@
         "$mod SHIFT, right, exec, $workspace movemonitor"
         "$mod, left, exec, $workspace switchmonitor"
         "$mod, right, exec, $workspace switchmonitor"
+
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioPrev, exec, bun /home/drigster/dotfiles/bin/scripts/src/media/actions.ts next"
+        ", XF86AudioNext, exec, bun /home/drigster/dotfiles/bin/scripts/src/media/actions.ts previous"
+        ", XF86AudioPlay, exec, bun /home/drigster/dotfiles/bin/scripts/src/media/actions.ts playpause"
+        ", XF86MonBrightnessDown, exec, "
+        ", XF86MonBrightnessUp, exec, "
+        ", XF86Tools, exec, rofi -show combi -click-to-exit -kb-cancel \"Escape,MouseSecondary\""
       ];
 
       workspace = [
