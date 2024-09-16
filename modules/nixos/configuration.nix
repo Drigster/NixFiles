@@ -112,6 +112,8 @@
     alejandra
     dconf
     networkmanager
+    nodejs
+    pnpm
   ];
 
   programs.nix-ld.enable = true;
