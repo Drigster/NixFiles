@@ -110,6 +110,15 @@
     userEmail = "62962772+Drigster@users.noreply.github.com";
   };
 
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+    ];
+  };
+
   # programs.steam = {
   #   enable = true;
   #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
