@@ -113,6 +113,7 @@
         "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
         "workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$"
         "tile, class:^([Ss]team)$, title:^([Ss]team)$"
+<<<<<<< HEAD
         "float,class:^(thunar)$,title:^(File Operation Progress)$"
         "stayfocused, title:^(VirtualBox Manager)$, class:^(VirtualBox Manager)$"
         "size 1060 630,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
@@ -130,6 +131,12 @@
         "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
         "center, floating:1,class:^(Code)$"
         "stayfocused, floating:1,class:^(Code)$"
+=======
+        "fullscreen, class:^(steam_app_(.*))$"
+        "workspace 5 silent, class:^([Ss]team)$"
+        "workspace 5 silent, title:^([Ss]team)$"
+        "float, class:^([Ss]team)$"
+>>>>>>> abca81d (98 current  2024-09-22 16:58:11  24.11.20240906.574d1ea   6.6.49                          *)
       ];
 
       windowrule = [
