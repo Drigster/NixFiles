@@ -133,7 +133,7 @@
         "stayfocused, floating:1,class:^(Code)$"
 =======
         "fullscreen, class:^(steam_app_(.*))$"
-        "workspace 1, class:^(steam_app_(.*))$"
+        "workspace 1 silent, class:^(steam_app_(.*))$"
         "workspace 5 silent, class:^([Ss]team)$"
         "workspace 5 silent, title:^([Ss]team)$"
         "float, class:^([Ss]team)$"
