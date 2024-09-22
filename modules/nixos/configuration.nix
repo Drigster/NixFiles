@@ -99,7 +99,7 @@
     bun
     bat
     zoxide
-    lxqt.lxqt-policykit
+    polkit_gnome
     git
     gh
     kdePackages.qt6ct

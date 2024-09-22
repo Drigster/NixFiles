@@ -218,6 +218,11 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
+
+      exec-once = [
+        "polkit-agent-helper-1"
+        "systemctl start --user polkit-gnome-authentication-agent-1"
+      ];
     };
   };
 }
