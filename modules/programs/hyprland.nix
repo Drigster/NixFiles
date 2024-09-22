@@ -130,10 +130,6 @@
         "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
         "center, floating:1,class:^(Code)$"
         "stayfocused, floating:1,class:^(Code)$"
-        "float, class:^([Ss]team)$, title:(Friends List)"
-        "workspace 5 silent, class:^([Ss]team)$"
-        "workspace 5 silent, title:^([Ss]team)$"
-        "tile, class:^([Ss]team)$, title:^([Ss]team)$"
       ];
 
       windowrule = [
