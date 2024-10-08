@@ -40,6 +40,10 @@
     pkgs.xorg.xev
 
     pkgs.vlc
+    pkgs.sqlitebrowser
+    pkgs.nfs-utils
+    pkgs.mongodb-compass
+    pkgs.jetbrains.jdk
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

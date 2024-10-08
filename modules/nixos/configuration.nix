@@ -55,7 +55,7 @@
   hardware.pulseaudio.enable = false;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   security.rtkit.enable = true;
   security.polkit.enable = true;
