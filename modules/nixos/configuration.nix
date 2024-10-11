@@ -115,6 +115,9 @@
     networkmanager
     nodejs
     pnpm
+    networkmanagerapplet
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
   ];
 
   programs.nix-ld.enable = true;

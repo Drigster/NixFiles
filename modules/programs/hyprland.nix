@@ -98,7 +98,6 @@
           "specialWorkspace, 1, 6, default, slidefadevert -50%"
         ];
       };
-
       dwindle = {
         pseudotile = "yes";
         preserve_split = "yes";
@@ -107,18 +106,31 @@
       # Window rules
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "center, class:^(Xdg-desktop-portal-gtk)\"$\""
-        "stayfocused, class:^(Xdg-desktop-portal-gtk)\"$\""
-        "center, floating:1,class:^(Code)\"$\""
-        "stayfocused, floating:1,class:^(Code)\"$\""
-        "float, class:^([Ss]team)\"$\", title:^((?![Ss]team).*)\"$\""
-        "workspace 5 silent, class:^([Ss]team)\"$\", title:^([Ss]team)\"$\""
-        "tile, class:^([Ss]team)\"$\", title:^([Ss]team)\"$\""
+        "center, class:^(Xdg-desktop-portal-gtk)$"
+        "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
+        "center, floating:1,class:^(Code)$"
+        "stayfocused, floating:1,class:^(Code)$"
+        "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
+        "workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$"
+        "tile, class:^([Ss]team)$, title:^([Ss]team)$"
+        "float,class:^(thunar)$,title:^(File Operation Progress)$"
+        "stayfocused, title:^(VirtualBox Manager)$, class:^(VirtualBox Manager)$"
+        "size 1060 630,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
+        "center,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
+        "float,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
+        "size 1060 630,class:^(VirtualBox)$,title:^(.*Settings*.)$"
+        "center,class:^(VirtualBox)$,title:^(.*Settings*.)$"
+        "float,class:^(VirtualBox)$,title:^(.*Settings*.)$"
+        "size 1060 630,class:^(VirtualBox)$,title:^(.* - *.)$"
+        "center,class:^(VirtualBox)$,title:^(.* - *.)$"
+        "float,class:^(VirtualBox)$,title:^(.* - *.)$"
+        "fullscreen,class:^(VirtualBoxVM)$"
+        "workspace 2 silent,class:^(VirtualBoxVM)$"
       ];
 
       windowrule = [
-        "float, title:^(Picture-in-Picture)\"$\""
-        "float, ^(file-roller)\"$\""
+        "float, title:^(Picture-in-Picture)$"
+        "float, ^(file-roller)$"
         "workspace 3 silent, firefox"
         "workspace 4 silent, discord"
         "float, xfce-polkit"
@@ -140,8 +152,8 @@
         "$mod, M, exit, "
         "$mod, J, togglesplit, "
         "$mod SHIFT, F, fullscreen"
-        "ALT, PRINT, exec, hyprshot --freeze -m region -o ~/Pictures/Screenshots/$(date +'%Y-%m') -f $(date +'%Y-%m-%d-%H:%M_region.png')"
-        ", PRINT, exec, hyprshot -m output -o ~/Pictures/Screenshots/$(date +'%Y-%m') -f $(date +'%Y-%m-%d-%H:%M_output.png')"
+        "ALT, PRINT, exec, hyprshot --freeze -m region -o ~/Pictures/Screenshots/$(date + '%Y-%m') -f $(date + '%Y-%m-%d-%H:%M_region.png')"
+        ", PRINT, exec, hyprshot -m output -o ~/Pictures/Screenshots/$(date + '%Y-%m') -f $(date + '%Y-%m-%d-%H:%M_screen.png')"
         "$mod, 1, exec, $workspace switch 1"
         "$mod, 2, exec, $workspace switch 2"
         "$mod, 3, exec, $workspace switch 3"
