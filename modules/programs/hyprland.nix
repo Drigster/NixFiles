@@ -228,10 +228,10 @@
       exec-once = [
         "polkit-agent-helper-1"
         "systemctl start --user polkit-gnome-authentication-agent-1 >>~/pw-link.log 2>&1"
-        "pw-link -m Game alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
-        "pw-link -m Chat alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
-        "pw-link -m Media alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
-        "pw-link -m alsa_input.usb-C-Media_Electronics_Inc._GXT_258_Microphone-00.analog-stereo Mic >>~/pw-link.log 2>&1"
+        "SOURCE_PORT=\"Game\"; DESTINATION_PORT=\"alsa_output.pci-0000_0c_00.6.analog-stereo\"; while ! (pw-cli ls | grep -q \"$SOURCE_PORT\" && pw-cli ls | grep -q \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
+        "SOURCE_PORT=\"Chat\"; DESTINATION_PORT=\"alsa_output.pci-0000_0c_00.6.analog-stereo\"; while ! (pw-cli ls | grep -q \"$SOURCE_PORT\" && pw-cli ls | grep -q \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
+        "SOURCE_PORT=\"Media\"; DESTINATION_PORT=\"alsa_output.pci-0000_0c_00.6.analog-stereo\"; while ! (pw-cli ls | grep -q \"$SOURCE_PORT\" && pw-cli ls | grep -q \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
+        "SOURCE_PORT=\"alsa_input.usb-C-Media_Electronics_Inc._GXT_258_Microphone-00.analog-stereo\"; DESTINATION_PORT=\"Mic\"; while ! (pw-cli ls | grep -q \"$SOURCE_PORT\" && pw-cli ls | grep -q \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
       ];
     };
   };

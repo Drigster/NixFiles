@@ -45,6 +45,7 @@
     pkgs.mongodb-compass
     pkgs.jetbrains.jdk
     pkgs.davinci-resolve-studio
+    pkgs.teamspeak5_client
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
