@@ -227,11 +227,11 @@
 
       exec-once = [
         "polkit-agent-helper-1"
-        "systemctl start --user polkit-gnome-authentication-agent-1"
-        "pw-link Game alsa_output.pci-0000_0c_00.6.analog-stereo"
-        "pw-link Chat alsa_output.pci-0000_0c_00.6.analog-stereo"
-        "pw-link Media alsa_output.pci-0000_0c_00.6.analog-stereo"
-        "pw-link alsa_input.usb-C-Media_Electronics_Inc._GXT_258_Microphone-00.analog-stereo Mic"
+        "systemctl start --user polkit-gnome-authentication-agent-1 >>~/pw-link.log 2>&1"
+        "pw-link Game alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
+        "pw-link Chat alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
+        "pw-link Media alsa_output.pci-0000_0c_00.6.analog-stereo >>~/pw-link.log 2>&1"
+        "pw-link alsa_input.usb-C-Media_Electronics_Inc._GXT_258_Microphone-00.analog-stereo Mic >>~/pw-link.log 2>&1"
       ];
     };
   };
