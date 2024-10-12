@@ -108,13 +108,22 @@
         "suppressevent maximize, class:.*"
         "center, class:^(Xdg-desktop-portal-gtk)$"
         "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
+
+        #VSCode
         "center, floating:1,class:^(Code)$"
         "stayfocused, floating:1,class:^(Code)$"
+
+        #Steam
         "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
         "workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$"
         "tile, class:^([Ss]team)$, title:^([Ss]team)$"
-<<<<<<< HEAD
+        "fullscreen, class:^(steam_app_(.*))$"
+        "workspace 1 silent, class:^(steam_app_(.*))$"
+
+        #Thunar
         "float,class:^(thunar)$,title:^(File Operation Progress)$"
+
+        #VirtualBox
         "stayfocused, title:^(VirtualBox Manager)$, class:^(VirtualBox Manager)$"
         "size 1060 630,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
         "center,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
@@ -127,17 +136,6 @@
         "float,class:^(VirtualBox)$,title:^(.* - *.)$"
         "fullscreen,class:^(VirtualBoxVM)$"
         "workspace 2 silent,class:^(VirtualBoxVM)$"
-        "center, class:^(Xdg-desktop-portal-gtk)$"
-        "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
-        "center, floating:1,class:^(Code)$"
-        "stayfocused, floating:1,class:^(Code)$"
-=======
-        "fullscreen, class:^(steam_app_(.*))$"
-        "workspace 1 silent, class:^(steam_app_(.*))$"
-        "workspace 5 silent, class:^([Ss]team)$"
-        "workspace 5 silent, title:^([Ss]team)$"
-        "float, class:^([Ss]team)$"
->>>>>>> abca81d (98 current  2024-09-22 16:58:11  24.11.20240906.574d1ea   6.6.49                          *)
       ];
 
       windowrule = [
