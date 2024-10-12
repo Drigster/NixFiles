@@ -44,6 +44,7 @@
     pkgs.nfs-utils
     pkgs.mongodb-compass
     pkgs.jetbrains.jdk
+    pkgs.davinci-resolve-studio
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -114,6 +115,9 @@
     enable = true;
     userName = "Drigster";
     userEmail = "62962772+Drigster@users.noreply.github.com";
+    extraConfig = {
+      pull.rebase = true;
+    };
   };
 
   programs.obs-studio = {
