@@ -139,7 +139,7 @@
     xdg-desktop-portal-hyprland
     nodePackages_latest.prisma
     nemo
-    helvum
+    qpwgraph
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
