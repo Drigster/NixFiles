@@ -108,22 +108,24 @@
         "suppressevent maximize, class:.*"
         "center, class:^(Xdg-desktop-portal-gtk)$"
         "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
+        "workspace 9, class:^(Spotify)$"
 
         #VSCode
         "center, floating:1,class:^(Code)$"
         "stayfocused, floating:1,class:^(Code)$"
 
         #Steam
-        "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
         "workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$"
+        "workspace 1 silent, class:^(steam_app_(.*))$"
+        "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
         "tile, class:^([Ss]team)$, title:^([Ss]team)$"
         "fullscreen, class:^(steam_app_(.*))$"
-        "workspace 1 silent, class:^(steam_app_(.*))$"
 
         #Thunar
         "float,class:^(thunar)$,title:^(File Operation Progress)$"
 
         #VirtualBox
+        "workspace 2 silent,class:^(VirtualBoxVM)$"
         "stayfocused, title:^(VirtualBox Manager)$, class:^(VirtualBox Manager)$"
         "size 1060 630,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
         "center,class:^(VirtualBox)$,title:^(.*Preferences*.)$"
@@ -135,7 +137,6 @@
         "center,class:^(VirtualBox)$,title:^(.* - *.)$"
         "float,class:^(VirtualBox)$,title:^(.* - *.)$"
         "fullscreen,class:^(VirtualBoxVM)$"
-        "workspace 2 silent,class:^(VirtualBoxVM)$"
       ];
 
       windowrule = [
