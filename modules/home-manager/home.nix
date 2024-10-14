@@ -27,7 +27,7 @@
   home.packages = [
     pkgs.sublime4
     pkgs.thunderbird
-    pkgs.discord
+    pkgs.vesktop # discord
     pkgs.rustup
     pkgs.vscodium-fhs
     pkgs.spotify
