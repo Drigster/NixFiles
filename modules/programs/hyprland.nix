@@ -109,6 +109,7 @@
         "center, class:^(Xdg-desktop-portal-gtk)$"
         "stayfocused, class:^(Xdg-desktop-portal-gtk)$"
         "workspace 9, class:^(Spotify)$"
+        "tilem class:^.*([mM]inecraft).*%"
 
         #VSCode
         "center, floating:1,class:^(Code)$"
