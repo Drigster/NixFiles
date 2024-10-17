@@ -103,7 +103,7 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    "inode/directory" = ["thunar.desktop" "codium.desktop"];
+    "inode/directory" = ["nemo.desktop" "codium.desktop"];
     "image/jpeg" = ["gimp.desktop"];
     "text/plain" = ["codium.desktop"];
     "image/svg+xml" = ["codium.desktop"];
