@@ -140,6 +140,8 @@
     nodePackages_latest.prisma
     nemo
     qpwgraph
+    python3
+    python312Packages.pip
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";

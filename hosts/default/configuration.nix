@@ -21,5 +21,11 @@
     options = ["nfsvers=4.2" "x-systemd.automount" "noauto" "x-systemd.idle-timeout=600"];
   };
 
+  users.extraGroups.vboxusers.members = ["drigster"];
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.dragAndDrop = true;
+
   nvidia.enable = true;
 }

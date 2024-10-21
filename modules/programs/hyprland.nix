@@ -164,7 +164,7 @@
         "$mod, M, exit, "
         "$mod, J, togglesplit, "
         "$mod SHIFT, F, fullscreen"
-        "ALT, PRINT, exec, hyprshot --freeze -m region -o ~/Pictures/Screenshots/$(date + '%Y-%m') -f $(date + '%Y-%m-%d-%H:%M_region.png')"
+        "CTRL, PRINT, exec, hyprshot --freeze -m region -o ~/Pictures/Screenshots/$(date + '%Y-%m') -f $(date + '%Y-%m-%d-%H:%M_region.png')"
         ", PRINT, exec, hyprshot -m output -o ~/Pictures/Screenshots/$(date + '%Y-%m') -f $(date + '%Y-%m-%d-%H:%M_screen.png')"
         "$mod, 1, exec, $workspace switch 1"
         "$mod, 2, exec, $workspace switch 2"
