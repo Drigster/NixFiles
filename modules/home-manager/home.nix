@@ -43,7 +43,8 @@
     pkgs.sqlitebrowser
     pkgs.nfs-utils
     pkgs.mongodb-compass
-    pkgs.jetbrains.jdk
+    pkgs.jdk21
+    pkgs.javaPackages.openjfx21
     pkgs.davinci-resolve-studio
     pkgs.teamspeak5_client
 
