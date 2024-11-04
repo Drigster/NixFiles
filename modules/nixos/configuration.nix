@@ -209,6 +209,11 @@
     # here, NOT in environment.systemPackages
   ];
 
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk21.override {enableJavaFX = true;};
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play

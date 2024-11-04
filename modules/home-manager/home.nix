@@ -43,7 +43,6 @@
     pkgs.sqlitebrowser
     pkgs.nfs-utils
     pkgs.mongodb-compass
-    pkgs.temurin-bin
     pkgs.davinci-resolve-studio
     pkgs.teamspeak5_client
 
