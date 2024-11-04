@@ -111,6 +111,7 @@
         "workspace 9, class:^(Spotify)$"
         "tile, class:^.*([mM]inecraft).*$"
         "float, class:^pro\.gravit\.launcher.*$"
+        "center, class:^pro\.gravit\.launcher.*$"
 
         #VSCode
         "center, floating:1,class:^(Code)$"
