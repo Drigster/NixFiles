@@ -119,10 +119,12 @@
 
         #Steam
         "workspace 5 silent, class:^([Ss]team)$, title:^([Ss]team)$"
-        "workspace 1 silent, class:^(steam_app_(.*))$"
         "float, class:^([Ss]team)$, title:^((?![Ss]team).*)$"
         "tile, class:^([Ss]team)$, title:^([Ss]team)$"
+        "workspace 1 silent, class:^(steam_app_(.*))$"
         "fullscreen, class:^(steam_app_(.*))$"
+        "workspace 1 silent, class:^(factorio)$"
+        "fullscreen, class:^(factorio)$"
 
         #Thunar
         "float,class:^(thunar)$,title:^(File Operation Progress)$"
