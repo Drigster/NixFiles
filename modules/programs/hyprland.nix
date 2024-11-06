@@ -123,8 +123,8 @@
         "tile, class:^([Ss]team)$, title:^([Ss]team)$"
         "workspace 1, class:^(steam_app_(.*))$"
         "fullscreen, class:^(steam_app_(.*))$"
-        # "workspace 1, class:^(factorio)$"
-        # "fullscreen, class:^(factorio)$"
+        "workspace 1, class:^(factorio)$"
+        "fullscreen, class:^(factorio)$"
 
         #Thunar
         "float,class:^(thunar)$,title:^(File Operation Progress)$"
