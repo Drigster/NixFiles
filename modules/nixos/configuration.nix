@@ -142,8 +142,8 @@
     qpwgraph
     python3
     python312Packages.pip
-    jdk17
     (jdk21.override {enableJavaFX = true;})
+    jdk17
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
