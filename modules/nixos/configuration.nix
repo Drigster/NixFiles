@@ -143,6 +143,7 @@
     python3
     python312Packages.pip
     jdk17
+    (jdk21.override {enableJavaFX = true;})
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
@@ -209,11 +210,6 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
-
-  programs.java = {
-    enable = true;
-    package = pkgs.jdk21.override {enableJavaFX = true;};
-  };
 
   programs.steam = {
     enable = true;
