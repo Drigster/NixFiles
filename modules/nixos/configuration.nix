@@ -148,6 +148,7 @@
     libreoffice
 
     prisma-engines
+    xorg.libX11
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
