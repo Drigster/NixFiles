@@ -150,6 +150,7 @@
     prisma-engines
     xorg.libX11
     glfw-wayland
+    gimp
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
