@@ -138,7 +138,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     nodePackages_latest.prisma
-    cinnamon.nemo-with-extensions
+    nemo-with-extensions
 
     qpwgraph
     python3
@@ -149,10 +149,15 @@
     libreoffice
 
     prisma-engines
-    xorg.libX11
-    glfw-wayland
-    libGL
     gimp
+
+    xorg.libX11
+    xorg.libXrandr
+    xorg.libXcursor
+    libGL
+    glfw
+    glfw-wayland
+    libpulseaudio
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
@@ -217,9 +222,11 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     xorg.libX11
+    xorg.libXrandr
     xorg.libXcursor
     libGL
     glfw
+    glfw-wayland
     libpulseaudio
   ];
 
