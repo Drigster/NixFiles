@@ -138,7 +138,10 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     nodePackages_latest.prisma
-    nemo
+    cinnamon.nemo
+    cinnamon.nemo-emblems
+    cinnamon.nemo-fileroller
+
     qpwgraph
     python3
     python312Packages.pip
