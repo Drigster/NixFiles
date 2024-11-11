@@ -24,6 +24,7 @@
           nvidia-vaapi-driver
           vaapiVdpau
           libvdpau-va-gl
+          mesa.drivers
         ];
       };
     };

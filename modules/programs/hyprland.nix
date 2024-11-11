@@ -238,6 +238,7 @@
         "SOURCE_PORT=\"Chat\"; DESTINATION_PORT=\"alsa_output.pci-0000_0c_00.6.analog-stereo\"; while ! (pw-cli ls | grep \"$SOURCE_PORT\" && pw-cli ls | grep \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
         "SOURCE_PORT=\"Media\"; DESTINATION_PORT=\"alsa_output.pci-0000_0c_00.6.analog-stereo\"; while ! (pw-cli ls | grep \"$SOURCE_PORT\" && pw-cli ls | grep \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
         "SOURCE_PORT=\"alsa_input.usb-C-Media_Electronics_Inc._GXT_258_Microphone-00.analog-stereo\"; DESTINATION_PORT=\"Mic\"; while ! (pw-cli ls | grep \"$SOURCE_PORT\" && pw-cli ls | grep \"$DESTINATION_PORT\"); do sleep 1; done; pw-link \"$SOURCE_PORT\" \"$DESTINATION_PORT\" >>~/pw-link.log 2>&1"
+        "export LD_LIBRARY_PATH=$(nix build --print-out-paths --no-link nixpkgs#libGL)/lib"
       ];
     };
   };
