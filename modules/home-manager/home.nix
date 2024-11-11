@@ -43,7 +43,6 @@
     pkgs.sqlitebrowser
     pkgs.nfs-utils
     pkgs.mongodb-compass
-    pkgs.davinci-resolve-studio
     pkgs.teamspeak5_client
 
     pkgs.prismlauncher

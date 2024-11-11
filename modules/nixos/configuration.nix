@@ -144,6 +144,10 @@
     python312Packages.pip
     (jdk21.override {enableJavaFX = true;})
     jdk17
+    clamav
+    libreoffice
+
+    prisma-engines
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
