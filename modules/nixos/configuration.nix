@@ -150,6 +150,7 @@
     prisma-engines
     xorg.libX11
     glfw-wayland
+    libGL
     gimp
   ];
 
