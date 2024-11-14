@@ -141,7 +141,7 @@
     nemo-with-extensions
 
     qpwgraph
-    python3
+    python312Full
     python312Packages.pip
     (jdk21.override {enableJavaFX = true;})
     jdk17
