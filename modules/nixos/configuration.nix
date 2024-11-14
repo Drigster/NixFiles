@@ -154,6 +154,7 @@
     xorg.libX11
     xorg.libXrandr
     xorg.libXcursor
+    xorg.libxcb
     libGL
     glfw
     glfw-wayland
@@ -224,6 +225,7 @@
     xorg.libX11
     xorg.libXrandr
     xorg.libXcursor
+    xorg.libxcb
     libGL
     glfw
     glfw-wayland
