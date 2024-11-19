@@ -4,12 +4,24 @@
   inputs,
   lib,
   ...
-}: {
+}: let
+  unstableTarball =
+    fetchTarball
+    https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
+in {
   imports = [
     inputs.home-manager.nixosModules.default
     ./../programs/xdg-portal.nix
     ./../programs/thunar.nix
   ];
+
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = import unstableTarball {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
@@ -159,6 +171,8 @@
     glfw
     glfw-wayland
     libpulseaudio
+    unstable.wireguard-ui
+    wireguard-tools
   ];
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
