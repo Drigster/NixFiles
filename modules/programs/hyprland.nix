@@ -126,9 +126,6 @@
         "workspace 1, class:^(factorio)$"
         "fullscreen, class:^(factorio)$"
 
-        #Thunar
-        "float,class:^(thunar)$,title:^(File Operation Progress)$"
-
         #VirtualBox
         "workspace 2 silent,class:^(VirtualBoxVM)$"
         "stayfocused, title:^(VirtualBox Manager)$, class:^(VirtualBox Manager)$"

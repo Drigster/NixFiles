@@ -9,7 +9,6 @@
   imports = [
     inputs.home-manager.nixosModules.default
     ./../programs/xdg-portal.nix
-    ./../programs/thunar.nix
   ];
 
   _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
@@ -238,18 +237,6 @@
       }
     ];
   };
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    xorg.libX11
-    xorg.libXrandr
-    xorg.libXcursor
-    xorg.libxcb
-    libGL
-    glfw
-    glfw-wayland
-    libpulseaudio
-  ];
 
   programs.steam = {
     enable = true;
