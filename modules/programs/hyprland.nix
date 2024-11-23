@@ -27,7 +27,7 @@
       monitor = [
         "DP-4, 2560x1080@144, 0x0, 1"
         "eDP-1, 2560x1600@165, 0x0, 1"
-        ", disabled"
+        ", prefered, auto-left, 1"
       ];
 
       "$mod" = "SUPER";
@@ -75,10 +75,10 @@
           passes = 1;
         };
 
-        drop_shadow = "yes";
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        # drop_shadow = "yes";
+        # shadow_range = 4;
+        # shadow_render_power = 3;
+        # "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {

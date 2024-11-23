@@ -1,26 +1,20 @@
 {
   config,
   pkgs,
+  pkgsUnstable,
   inputs,
   lib,
   ...
-}: let
-  unstableTarball =
-    fetchTarball
-    https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
-in {
+}: {
   imports = [
     inputs.home-manager.nixosModules.default
     ./../programs/xdg-portal.nix
     ./../programs/thunar.nix
   ];
 
-  nixpkgs.config = {
-    packageOverrides = pkgs: {
-      unstable = import unstableTarball {
-        config = config.nixpkgs.config;
-      };
-    };
+  _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
   };
 
   boot.loader.grub.enable = true;
@@ -123,7 +117,7 @@ in {
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     dunst
     ark
     kitty
@@ -173,12 +167,15 @@ in {
     libpulseaudio
     unstable.wireguard-ui
     wireguard-tools
-  ];
+  ]) ++ (with pkgsUnstable; [
+    wireguard-ui
+  ]);
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
   environment.variables.PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
   environment.variables.PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
-
+  
+  services.resolved.enable = true;
   services.pipewire.extraConfig.pipewire."91-null-sinks" = {
     "context.objects" = [
       {
@@ -260,7 +257,7 @@ in {
 
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     (nerdfonts.override {fonts = ["FiraCode" "NerdFontsSymbolsOnly"];})
     texlivePackages.inter

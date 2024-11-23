@@ -12,7 +12,7 @@
   programs.xfconf.enable = true;
   services.gvfs = {
     enable = true;
-    package = lib.mkForce pkgs.gnome3.gvfs;
+    package = lib.mkForce pkgs.gnome.gvfs;
   };
   services.tumbler.enable = true;
 }
