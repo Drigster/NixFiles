@@ -117,64 +117,65 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = (with pkgs; [
-    dunst
-    ark
-    kitty
-    bun
-    bat
-    zoxide
-    polkit_gnome
-    git
-    gh
-    kdePackages.qt6ct
-    adw-gtk3
-    hyprshot
-    xwaylandvideobridge
-    egl-wayland
-    pavucontrol
-    pamixer
-    btop
-    alejandra
-    dconf
-    networkmanager
-    nodejs
-    pnpm
-    networkmanagerapplet
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-    nodePackages_latest.prisma
-    nemo-with-extensions
+  environment.systemPackages =
+    (with pkgs; [
+      dunst
+      ark
+      kitty
+      bun
+      bat
+      zoxide
+      polkit_gnome
+      git
+      gh
+      kdePackages.qt6ct
+      adw-gtk3
+      hyprshot
+      xwaylandvideobridge
+      egl-wayland
+      pavucontrol
+      pamixer
+      btop
+      alejandra
+      dconf
+      networkmanager
+      nodejs
+      pnpm
+      networkmanagerapplet
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+      nodePackages_latest.prisma
+      nemo-with-extensions
 
-    qpwgraph
-    python312Full
-    python312Packages.pip
-    (jdk21.override {enableJavaFX = true;})
-    jdk17
-    clamav
-    libreoffice
+      qpwgraph
+      python312Full
+      python312Packages.pip
+      (jdk21.override {enableJavaFX = true;})
+      jdk17
+      clamav
+      libreoffice
 
-    prisma-engines
-    gimp
+      prisma-engines
+      gimp
+      thunderbird
 
-    xorg.libX11
-    xorg.libXrandr
-    xorg.libXcursor
-    xorg.libxcb
-    libGL
-    glfw
-    glfw-wayland
-    libpulseaudio
-    unstable.wireguard-ui
-    wireguard-tools
-  ]) ++ (with pkgsUnstable; [
-    wireguard-ui
-  ]);
+      xorg.libX11
+      xorg.libXrandr
+      xorg.libXcursor
+      xorg.libxcb
+      libGL
+      glfw
+      glfw-wayland
+      libpulseaudio
+      wireguard-tools
+    ])
+    ++ (with pkgsUnstable; [
+      ]);
 
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
   environment.variables.PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
   environment.variables.PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
-  
+
   services.resolved.enable = true;
   services.pipewire.extraConfig.pipewire."91-null-sinks" = {
     "context.objects" = [
