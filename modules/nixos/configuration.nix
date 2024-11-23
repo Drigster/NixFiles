@@ -158,6 +158,7 @@
       prisma-engines
       gimp
       thunderbird
+      qbittorrent
 
       xorg.libX11
       xorg.libXrandr
