@@ -169,6 +169,7 @@
       glfw-wayland
       libpulseaudio
       wireguard-tools
+      xclicker
     ])
     ++ (with pkgsUnstable; [
       ]);
