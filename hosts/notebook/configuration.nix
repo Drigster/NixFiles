@@ -9,6 +9,7 @@
   services.xserver.videoDrivers = ["amdgpu"];
   boot.kernelParams = ["amdgpu.abmlevel=0"];
   services.power-profiles-daemon.enable = true;
+  services.fprintd.enable = true;
 
   services.udev.extraRules = ''
     ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0012", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
