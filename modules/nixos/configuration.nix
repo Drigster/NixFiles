@@ -66,7 +66,7 @@
   security.rtkit.enable = true;
   security.polkit.enable = true;
   security.pam.services = {
-    sddm.text = pkgs.lib.mkBefore ''
+    sddm-greeter.text = pkgs.lib.mkBefore ''
       auth 			[success=1 new_authtok_reqd=1 default=ignore]  	pam_unix.so try_first_pass likeauth nullok
       auth 			sufficient  	pam_fprintd.so
     '';
