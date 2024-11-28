@@ -161,7 +161,7 @@
         "$mod, Return, togglespecialworkspace"
         "$mod, E, exec, $fileManager"
         "$mod, D, exec, vesktop"
-        "$mod, C, exec, codium"
+        "$mod, C, exec, codium --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mod, B, exec, $browser"
         "ALT, SPACE, exec, pkill rofi || $menu"
         "$mod, Q, killactive, "
