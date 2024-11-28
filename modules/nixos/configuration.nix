@@ -66,9 +66,12 @@
   security.rtkit.enable = true;
   security.polkit.enable = true;
   security.pam.services = {
-    sddm.text = pkgs.lib.mkBefore ''
+    sddm.text = pkgs.lib.mkOverride 1 ''
       auth 			[success=1 new_authtok_reqd=1 default=ignore]  	pam_unix.so try_first_pass likeauth nullok
       auth 			sufficient  	pam_fprintd.so
+      account   include       login
+      password  substack      login
+      session   include       login
     '';
   };
 
