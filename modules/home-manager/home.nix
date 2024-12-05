@@ -28,7 +28,7 @@
     pkgs.sublime4
     pkgs.thunderbird
     pkgs.vesktop # discord
-    pkgs.rustup
+    pkgs.rustc
     pkgs.vscodium-fhs
     pkgs.spotify
     pkgs.syncthing
