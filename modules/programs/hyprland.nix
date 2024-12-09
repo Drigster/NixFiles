@@ -39,7 +39,7 @@
       "$browser" = "firefox";
 
       # Scripts
-      "$workspace" = "bun /home/drigster/dotfiles/bin/scripts/src/workspaces.ts";
+      "$workspace" = "bun /home/drigster/.config/scripts/src/workspaces.ts";
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
