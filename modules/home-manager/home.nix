@@ -78,6 +78,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".config/scripts/workspaces.sh".source = ../scripts/workspaces.ts;
   };
 
   # Home Manager can also manage your environment variables through
