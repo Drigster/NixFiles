@@ -202,6 +202,15 @@
       ];
 
       workspace = [
+        "1,monitor:HDMI-A-2"
+        "2,monitor:HDMI-A-2"
+        "3,monitor:HDMI-A-2"
+        "4,monitor:HDMI-A-2"
+        "5,monitor:HDMI-A-2"
+        "6,monitor:HDMI-A-2"
+        "7,monitor:HDMI-A-2"
+        "8,monitor:HDMI-A-2"
+        "9,monitor:HDMI-A-2"
         "1,monitor:DP-4"
         "2,monitor:DP-4"
         "3,monitor:DP-4"
