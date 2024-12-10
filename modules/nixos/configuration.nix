@@ -77,6 +77,11 @@
     pulse.enable = true;
   };
 
+  services.syncthing = {
+    enable = true;
+    configDir = "/home/drigster/.config/syncthing";
+  };
+
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -174,7 +179,6 @@
       libpulseaudio
       wireguard-tools
       xclicker
-      syncthing
     ])
     ++ (with pkgsUnstable; [
       ]);
