@@ -79,7 +79,15 @@
 
   services.syncthing = {
     enable = true;
+    group = "drigster";
+    user = "drigster";
+    dataDir = "/home/drigster/Documents";
     configDir = "/home/drigster/.config/syncthing";
+  };
+
+  services.syncthing.settings.gui = {
+    user = "drigster";
+    password = "";
   };
 
   systemd = {
