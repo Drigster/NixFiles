@@ -174,6 +174,7 @@
       libpulseaudio
       wireguard-tools
       xclicker
+      syncthing
     ])
     ++ (with pkgsUnstable; [
       ]);
