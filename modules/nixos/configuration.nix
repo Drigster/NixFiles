@@ -87,7 +87,7 @@
 
   services.syncthing.settings.gui = {
     user = "drigster";
-    password = "";
+    password = "drigster";
   };
 
   systemd = {
