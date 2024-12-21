@@ -56,6 +56,7 @@
 
   services.printing.enable = true;
   services.blueman.enable = true;
+  services.gvfs.enable = true;
 
   hardware.pulseaudio.enable = false;
   hardware.bluetooth.enable = true;
@@ -107,9 +108,6 @@
       DefaultTimeoutStopSec=10s
     '';
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   users.users.drigster = {
     isNormalUser = true;

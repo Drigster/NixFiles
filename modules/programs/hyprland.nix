@@ -43,7 +43,7 @@
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
       input = {
-        kb_layout = "us, ru";
+        kb_layout = "us, ru, ee";
         kb_options = "grp:win_space_toggle";
 
         follow_mouse = 1;
@@ -51,6 +51,7 @@
 
         touchpad = {
           natural_scroll = "no";
+          disable_while_typing = "no";
         };
         sensitivity = 0;
       };
