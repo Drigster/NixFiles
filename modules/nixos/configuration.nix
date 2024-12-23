@@ -78,18 +78,6 @@
     pulse.enable = true;
   };
 
-  services.syncthing = {
-    enable = true;
-    user = "drigster";
-    dataDir = "/home/drigster/Documents";
-    configDir = "/home/drigster/.config/syncthing";
-  };
-
-  services.syncthing.settings.gui = {
-    user = "drigster";
-    password = "drigster";
-  };
-
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -184,6 +172,7 @@
       libpulseaudio
       wireguard-tools
       xclicker
+      syncthing
     ])
     ++ (with pkgsUnstable; [
       ]);

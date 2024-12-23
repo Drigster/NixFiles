@@ -79,6 +79,7 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".config/scripts/workspaces.ts".source = ../../scripts/workspaces.ts;
+    ".config/scripts/switch_layouts.sh".source = ../../scripts/switch_layouts.sh;
   };
 
   # Home Manager can also manage your environment variables through

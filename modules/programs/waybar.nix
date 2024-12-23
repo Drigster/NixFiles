@@ -32,8 +32,9 @@
           format-en = "us";
           format-ru = "ru";
           format-et = "et";
-          on-click = "hyprctl switchxkblayout mountain-mountain-everest-keyboard next";
-          on-click-right = "hyprctl switchxkblayout mountain-mountain-everest-keyboard prev";
+          on-scroll-down = "hyprctl switchxkblayout mountain-mountain-everest-keyboard next";
+          on-scroll-up = "hyprctl switchxkblayout mountain-mountain-everest-keyboard prev";
+          on-click-right = "sh /home/drigster/.config/scripts/switch_layouts.sh";
         };
         bluetooth = {
           format = "";
@@ -59,8 +60,8 @@
         };
         "hyprland/workspaces" = {
           format = "{icon}";
-          on-scroll-up = "bun /home/drigster/dotfiles/bin/scripts/src/workspaces.ts previous";
-          on-scroll-down = "bun /home/drigster/dotfiles/bin/scripts/src/workspaces.ts next";
+          on-scroll-up = "bun /home/drigster/.config/scripts/workspaces.ts previous";
+          on-scroll-down = "bun /home/drigster/.config/scripts/workspaces.ts next";
           sort-by = "id";
           format-icons = {
             "1" = "1";
