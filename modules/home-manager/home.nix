@@ -38,6 +38,8 @@
     pkgs.libqalculate
     pkgs.xorg.xev
 
+    pkgs.rofi-power-menu
+
     pkgs.vlc
     pkgs.sqlitebrowser
     pkgs.nfs-utils
