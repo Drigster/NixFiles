@@ -36,8 +36,6 @@
     pkgs.python3
 
     pkgs.libqalculate
-    pkgs.rofi-calc
-    pkgs.rofi-power-menu
     pkgs.xorg.xev
 
     pkgs.vlc

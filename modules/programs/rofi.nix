@@ -6,9 +6,9 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    plugins = [
-      pkgs.rofi-calc
-      pkgs.rofi-power-menu
+    plugins = with pkgs; [
+      (rofi-calc.override {rofi-unwrapped = rofi-wayland-unwrapped;})
+      rofi-power-menu
     ];
     theme = let
       inherit (config.lib.formats.rasi) mkLiteral;
