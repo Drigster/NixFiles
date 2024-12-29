@@ -47,6 +47,7 @@
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
           on-click = "blueman-manager";
+          on-right-click = "blueman-manager";
         };
         network = {
           format = "{ifname}";
