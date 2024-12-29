@@ -100,6 +100,13 @@
   };
 
   systemd = {
+    user.services.mpris-proxy = {
+      description = "Mpris proxy";
+      after = ["network.target" "sound.target"];
+      wantedBy = ["default.target"];
+      serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+    };
+
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
       wantedBy = ["graphical-session.target"];
