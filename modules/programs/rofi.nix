@@ -15,7 +15,7 @@
     in {
       configuration = {
         # calc:${pkgs.rofi-calc}/bin/calc,
-        modi = "drun,calc,filebrowser,window,combi,run,power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu";
+        modi = "drun,calc,filebrowser,window,run,power-menu:${pkgs.rofi-power-menu}/bin/rofi-power-menu";
         combi-modi = ["drun" "calc" "power-menu"];
         show-icons = true;
         display-drun = "";
