@@ -76,7 +76,8 @@
     enable = true;
     settings = {
       General = {
-        Name = "Hello";
+        Enable = "Source,Sink,Media,Socket";
+        Name = "NixOS";
         ControllerMode = "dual";
         FastConnectable = "true";
         Experimental = "true";
