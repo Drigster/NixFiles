@@ -58,46 +58,42 @@
   services.blueman.enable = true;
   services.gvfs.enable = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.extraConfig.bluetoothEnhancements = {
+      "monitor.bluez.properties" = {
+        "bluez5.enable-sbc-xq" = true;
+        "bluez5.enable-msbc" = true;
+        "bluez5.enable-hw-volume" = true;
+        "bluez5.roles" = ["hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag"];
+      };
+    };
+  };
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = true;
     settings = {
       General = {
-        Name = "Computer";
+        Name = "Hello";
         ControllerMode = "dual";
         FastConnectable = "true";
         Experimental = "true";
       };
-      Policy = {AutoEnable = "true";};
-      LE = {EnableAdvMonInterleaveScan = "true";};
+      Policy = {
+        AutoEnable = "true";
+      };
     };
   };
   hardware.graphics.enable = true;
-
+  hardware.enableAllFirmware = true;
   security.rtkit.enable = true;
   security.polkit.enable = true;
   security.pam.services = {
     sddm.text = pkgs.lib.mkBefore ''
       auth      include   login
     '';
-  };
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    wireplumber.configPackages = [
-      (pkgs.writeTextDir "share/wireplumber/wireplumber.conf.d/10-bluez.conf" ''
-        monitor.bluez.properties = {
-          bluez5.roles = [ a2dp_sink a2dp_source bap_sink bap_source hsp_hs hsp_ag hfp_hf hfp_ag ]
-          bluez5.codecs = [ sbc sbc_xq aac ]
-          bluez5.enable-sbc-xq = true
-          bluez5.hfphsp-backend = "native"
-        }
-      '')
-    ];
   };
 
   services.syncthing = {
