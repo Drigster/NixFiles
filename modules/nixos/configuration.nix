@@ -69,15 +69,25 @@
             matches = [{"device.name" = "~bluez_card.*";}];
             actions = {
               update-props = {
-                "bluez5.auto-connect" = [
+                "bluez5.reconnect-profiles" = [
+                  "hfp_hf"
+                  "hsp_hs"
                   "a2dp_sink"
-                  "a2dp_source"
                 ];
-                "bluez5.hw-volume" = [
-                  "a2dp_sink"
-                  "a2dp_source"
-                ];
+                "bluez5.msbc-support" = true;
+                "bluez5.sbc-xq-support" = true;
               };
+            };
+          }
+          {
+            matches = [
+              # Matches all sources
+              {"node.name" = "~bluez_input.*";}
+              # Matches all outputs
+              {"node.name" = "~bluez_output.*";}
+            ];
+            actions = {
+              "node.pause-on-idle" = false;
             };
           }
         ];
@@ -249,6 +259,7 @@
       wireguard-tools
       xclicker
       syncthing
+      fastfetch
     ])
     ++ (with pkgsUnstable; [
       ]);
