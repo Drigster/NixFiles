@@ -135,9 +135,12 @@
           on-click = "kitty btop";
         };
         backlight = {
-          device = "amdgpu_bl1";
           format = "{icon} {percent}%";
           format-icons = ["󰹐" "󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
+          on-scroll-up = "brightnessctl set +5%";
+          on-scroll-down = "brightnessctl set -5%";
+          on-click = "brightnessctl set 50%";
+          on-click-right = "brightnessctl set 100%";
         };
         battery = {
           interval = 10;

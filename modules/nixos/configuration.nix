@@ -260,6 +260,7 @@
       xclicker
       syncthing
       fastfetch
+      brightnessctl
     ])
     ++ (with pkgsUnstable; [
       ]);
