@@ -18,6 +18,7 @@
           "backlight"
           "battery"
           "cpu"
+          "custom/gpu"
           "memory"
           "pulseaudio"
           "pulseaudio#pulse2"
@@ -58,6 +59,7 @@
           tooltip-format-wifi = "{essid} ({signalStrength}%) \n\n {bandwidthUpBytes}  {bandwidthDownBytes}";
           tooltip-format-ethernet = "{ifname}\n{ipaddr}";
           tooltip-format-disconnected = "Disconnected";
+          interval = 5;
         };
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -124,6 +126,7 @@
             critical = 90;
           };
           on-click = "kitty btop";
+          interval = 5;
         };
         memory = {
           format = " {used:0.1f}GB";
@@ -133,6 +136,12 @@
             critical = 90;
           };
           on-click = "kitty btop";
+          interval = 5;
+        };
+        "custom/gpu" = {
+          exec = "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent";
+          format = "GPU: {}%";
+          interval = 5;
         };
         backlight = {
           format = "{icon} {percent}%";
@@ -141,7 +150,7 @@
           on-scroll-down = "brightnessctl set 5%-";
         };
         battery = {
-          interval = 10;
+          interval = 5;
           states = {
             "0" = 0;
             "10" = 10;
