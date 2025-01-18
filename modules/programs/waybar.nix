@@ -55,7 +55,7 @@
           format-ethernet = "";
           format-disconnected = "󱘖";
           tooltip-format = "{ifname}";
-          tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+          tooltip-format-wifi = "{essid} ({signalStrength}%) \n\n {bandwidthUpBytes}  {bandwidthDownBytes}";
           tooltip-format-ethernet = "{ifname}\n{ipaddr}";
           tooltip-format-disconnected = "Disconnected";
         };
