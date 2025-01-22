@@ -261,6 +261,7 @@
       syncthing
       fastfetch
       brightnessctl
+      laravel
     ])
     ++ (with pkgsUnstable; [
       ]);
