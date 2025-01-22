@@ -262,6 +262,7 @@
       fastfetch
       brightnessctl
       laravel
+      php
     ])
     ++ (with pkgsUnstable; [
       ]);
