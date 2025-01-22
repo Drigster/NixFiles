@@ -267,6 +267,10 @@
     ++ (with pkgsUnstable; [
       ]);
 
+  services.phpfpm.phpOptions = ''
+    extension=pdo_mysql
+  '';
+
   environment.variables.PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
   environment.variables.PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
   environment.variables.PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
