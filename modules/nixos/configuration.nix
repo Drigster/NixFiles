@@ -261,17 +261,7 @@
       syncthing
       fastfetch
       brightnessctl
-      laravel
-      (pkgs.php.buildEnv {
-        extensions = {
-          enabled,
-          all,
-        }:
-          enabled
-          ++ (with all; [
-            pdo_mysql
-          ]);
-      })
+      unityhub
     ])
     ++ (with pkgsUnstable; [
       ]);
