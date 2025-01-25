@@ -263,6 +263,7 @@
       brightnessctl
       unityhub
       git-lfs
+      jetbrains.rider
     ])
     ++ (with pkgsUnstable; [
       ]);
