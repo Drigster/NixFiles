@@ -266,6 +266,7 @@
       jetbrains.rider
       mono
       dotnetCorePackages.dotnet_9.sdk
+      github-desktop
     ])
     ++ (with pkgsUnstable; [
       ]);
