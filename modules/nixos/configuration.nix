@@ -265,6 +265,7 @@
       git-lfs
       jetbrains.rider
       mono
+      dotnetCorePackages.dotnet_9.sdk
     ])
     ++ (with pkgsUnstable; [
       ]);
