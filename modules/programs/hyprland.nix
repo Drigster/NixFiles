@@ -113,7 +113,6 @@
         "tile, class:^.*([mM]inecraft).*$"
         "float, class:^pro\.gravit\.launcher.*$"
         "center, class:^pro\.gravit\.launcher.*$"
-        "minsize 500 250, class:^Unity$"
 
         #VSCode
         "center, floating:1,class:^(Code)$"
