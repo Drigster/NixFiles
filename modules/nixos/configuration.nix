@@ -262,6 +262,7 @@
       fastfetch
       brightnessctl
       unityhub
+      git-lfs
     ])
     ++ (with pkgsUnstable; [
       ]);
