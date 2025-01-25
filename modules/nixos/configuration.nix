@@ -267,6 +267,7 @@
       mono
       dotnetCorePackages.dotnet_9.sdk
       github-desktop
+      aseprite
     ])
     ++ (with pkgsUnstable; [
       ]);
