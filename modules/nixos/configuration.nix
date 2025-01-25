@@ -264,6 +264,7 @@
       unityhub
       git-lfs
       jetbrains.rider
+      mono
     ])
     ++ (with pkgsUnstable; [
       ]);
