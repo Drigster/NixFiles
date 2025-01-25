@@ -104,6 +104,8 @@
         preserve_split = "yes";
       };
 
+      source = ["~/.config/hypr/HyprlandUnityFix/UnityFix.conf"];
+
       # Window rules
       windowrulev2 = [
         "suppressevent maximize, class:.*"
