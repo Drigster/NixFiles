@@ -268,6 +268,9 @@
       dotnetCorePackages.dotnet_9.sdk
       github-desktop
       aseprite
+
+      xfce.thunar
+      krename
     ])
     ++ (with pkgsUnstable; [
       ]);
