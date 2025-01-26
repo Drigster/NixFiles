@@ -269,8 +269,8 @@
       github-desktop
       aseprite
 
-      xfce.thunar
       krename
+      ldtk
     ])
     ++ (with pkgsUnstable; [
       ]);
