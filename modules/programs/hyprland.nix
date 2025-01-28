@@ -25,9 +25,7 @@
       ];
 
       monitor = [
-        "DP-4, 2560x1080@144, 0x0, 1"
-        "eDP-1, 2560x1600@165, 0x0, 1"
-        ", prefered, auto-left, 1"
+        ", prefered, auto, 1"
       ];
 
       "$mod" = "SUPER";
